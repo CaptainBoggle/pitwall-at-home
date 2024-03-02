@@ -6,7 +6,7 @@ import requests
 webhook_url = 'WEBHOOK_URL'
 
 opener = urllib.request.build_opener()
-opener.addheaders = [('User-Agent', 'McLaren/600 CFNetwork/1325.0.1 Darwin/21.1.0')]
+opener.addheaders = [('User-Agent', 'McLaren/645 CFNetwork/1474 Darwin/23.0.0')]
 def get_data():
     response = opener.open('https://www.mclaren.com/racing/api/feed/v1/commentary/')
     data = json.load(response)
