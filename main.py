@@ -14,10 +14,10 @@ def get_data():
 
 sources_dict = {
     'cm': ("McLaren", "https://pbs.twimg.com/ext_tw_video_thumb/1446191112947970054/pu/img/o0FYOlkp44Q770aT.jpg"),
-    'p_RIC': ("Daniel's Engineer", "https://media-cdn.mclaren.com/media/images/galleries/GP2102_092405MS1_5133.jpg"),
+    'p_PIA': ("Oscar's Engineer", "https://media-cdn.mclaren.com/media/images/galleries/GP2102_092405MS1_5133.jpg"),
     'p_NOR': ("Lando's Engineer", "https://media-cdn.mclaren.com/media/images/galleries/GP2102_092405MS1_5133.jpg"),
-    'd_RIC': ("Daniel Ricciardo", "https://media-cdn.mclaren.com/media/images/drivers/hero/DR_website_hero_image_March_2022.jpg"),
-    'd_NOR': ("Lando Norris", "https://media-cdn.mclaren.com/media/images/drivers/hero/LN_website_hero_image_March_2022.jpg")
+    'd_PIA': ("Oscar Piastri", "https://mclaren.bloomreach.io/cdn-cgi/image/width=400,height=400,fit=crop/delivery/resources/content/gallery/mclaren-racing/team-members/oscar-piastri-team-landing-page-hero-2024.jpg"),
+    'd_NOR': ("Lando Norris", "https://mclaren.bloomreach.io/cdn-cgi/image/width=400,height=400,fit=crop/delivery/resources/content/gallery/mclaren-racing/team-members/lando-norris-team-landing-page-hero-2024.jpg")
 }
 
 
