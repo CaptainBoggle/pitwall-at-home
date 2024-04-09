@@ -3,6 +3,7 @@ from time import sleep
 import json
 import re
 from html.parser import HTMLParser
+import sys
 
 WEBHOOK_PROFILES_STANDARD = {
     'cmPitToDriver2': ("Oscar's Engineer", "https://cdn-1.motorsport.com/images/mgl/0rGy3eG2/s1200/the-mclaren-pit-wall-1.webp"),
@@ -18,8 +19,6 @@ WEBHOOK_PROFILES_OTHER = {
 
 WEBHOOK_URL = 'https://discord.com/api/webhooks/1028562194780131338/T_nRqLvcdLgZzyXJv8zdm54oWvd6M2N-GwOXPeYP0QiO3wifzsCZtNwLMCT76xxypAh4'
 
-# Placeholder API URL; replace with the actual URL if available
-API_URL = "https://mclaren.bloomreach.io/delivery/site/v1/channels/mclaren-racing-en/pages/c08GetCommentary/racing/formula-1/2024/bahrain-grand-prix/s5/cm/"
 
 # File to store seen timestamps
 SEEN_TIMESTAMPS_FILE = "seen_timestamps.json"
@@ -140,8 +139,20 @@ def send_webhook(user, profile, content):
         print(f"Failed to send webhook, status code: {response.status_code}")
 
 def main():
+
+    if len(sys.argv) < 3:
+        print("Usage: python main.py <country> <session>")
+        print("Example: python main.py bahrain 4")
+        return
+    
+    country = sys.argv[1]
+
+    session = sys.argv[2]
+
+    api_url = f"https://mclaren.bloomreach.io/delivery/site/v1/channels/mclaren-racing-en/pages/c08GetCommentary/racing/formula-1/2024/{country}-grand-prix/s{session}/cm/"
+
     while True:
-        index_data = fetch_data(API_URL)
+        index_data = fetch_data(api_url)
 
         new_timestamps = process_index(index_data)
 
