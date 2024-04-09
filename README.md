@@ -1,4 +1,4 @@
-# mclaren-teamstream-discord
+# pitwall-at-home
 Python script to automatically post content from the McLaren F1 teamstream to a discord server via webhooks. Made during the Suzuka 2022 red flag. Updated during Bahrain 2024.
 
 Simply chuck your webhook url into the variable, and modify the API url to suit the current session (I might make this automatic in future).
