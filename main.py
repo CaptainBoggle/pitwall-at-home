@@ -17,6 +17,7 @@ WEBHOOK_PROFILES_OTHER = {
         'pit': "https://cdn-1.motorsport.com/images/mgl/0rGy3eG2/s1200/the-mclaren-pit-wall-1.webp"
 }
 
+# Note: This is just a placeholder, and should be replaced with your own webhook URL. It is not a real webhook URL.
 WEBHOOK_URL = 'https://discord.com/api/webhooks/1028562194780131338/T_nRqLvcdLgZzyXJv8zdm54oWvd6M2N-GwOXPeYP0QiO3wifzsCZtNwLMCT76xxypAh4'
 
 
