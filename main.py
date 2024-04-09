@@ -95,7 +95,7 @@ def process_index(data):
     return new_timestamps
 
 
-def process_new(new_timestamps):
+def process_new(new_timestamps, api_url):
     if not new_timestamps:
         return
 
@@ -103,13 +103,13 @@ def process_new(new_timestamps):
     new_timestamps.sort()
 
     for timestamp in new_timestamps:
-        process_timestamp(timestamp)
+        process_timestamp(timestamp, api_url)
         sleep(0.15)
 
 
-def process_timestamp(timestamp):
+def process_timestamp(timestamp, api_url):
     # Fetch the data for the given timestamp
-    data = fetch_data(API_URL + timestamp)
+    data = fetch_data(api_url + timestamp)
 
     if not data:
         return
@@ -180,7 +180,7 @@ def main():
 
         new_timestamps = process_index(index_data)
 
-        process_new(new_timestamps)
+        process_new(new_timestamps, api_url)
 
         sleep(5)
 
