@@ -141,13 +141,17 @@ def send_webhook(user, profile, content):
 def main():
 
     if len(sys.argv) < 3:
-        print("Usage: python main.py <country> <session>")
+        print("Usage: python main.py <country> <session> <optional: webhook URL>")
         print("Example: python main.py bahrain 4")
         return
     
     country = sys.argv[1]
 
     session = sys.argv[2]
+
+    if len(sys.argv) == 4:
+        global WEBHOOK_URL
+        WEBHOOK_URL = sys.argv[3]
 
     api_url = f"https://mclaren.bloomreach.io/delivery/site/v1/channels/mclaren-racing-en/pages/c08GetCommentary/racing/formula-1/2024/{country}-grand-prix/s{session}/cm/"
 
